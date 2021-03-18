@@ -17,19 +17,7 @@ BINARYNAM
     echo -e "\n${*}" > "$pipe_in"
 
                 if [[ $empty_line_received -eq 1 ]]; then
-                    break
-                else
-                    empty_line_received=1
-                fi
-                continue
-            fi
-            if [[ $empty_line_received -eq 1 ]]; then
-                echo -e "$color<\u001b[0m \r"
-            fi
-            echo -en "$color<\u001b[0m "
-            echo "$line"
-        fi
-    done
+            
 }
 
 start_server() {
