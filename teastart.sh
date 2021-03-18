@@ -10,21 +10,7 @@ cd ${directory_base} || exit 1
 
 LIBRARYPATH="./libs/"
 PRELOADPATH="./libs/libjemalloc.so.2"
-BINARYNAME="TeaSpeakServer"
-PID_FILE="tpid.pid"
-
-if [[ ! -d logs ]]; then
-    echo "Please start the TeaSpeak-Server for the first time over teastart_minimal.sh"
-    echo "You could get the query interface information only over this way!"
-    exit 0
-fi
-
-if [[ -e "stpid.pid" ]]; then
-    echo "You already started you TeaSpeak server over teastart_autorestart.sh"
-    exit 0
-fi
-
-execute_command() {
+BINARYNAM
     if [[ ! -e ${PID_FILE} ]]; then
         echo "No server running (${PID_FILE} is missing)"
         exit 1
