@@ -1,0 +1,4 @@
+#A new line separated address blacklist
+#
+#For example if we dont want google:
+8.8.8.8

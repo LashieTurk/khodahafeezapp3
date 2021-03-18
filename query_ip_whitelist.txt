@@ -1,0 +1,4 @@
+#A new line separated address whitelist
+#Every ip have no flood and login attempt limit!
+127.0.0.1/8
+::1
