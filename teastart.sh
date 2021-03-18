@@ -14,13 +14,7 @@ BINARYNAM
                     if ( kill -0 $(cat ${PID_FILE}) 2> /dev/null ); then
                         echo -n "."
                         sleep 1
-                    else
-                        break
-                    fi
-                    c=$(($c+1))
-                done
-
-        stop_server
+                   
     ;;
     restart)
         $0 
