@@ -21,18 +21,6 @@ erver running. Possibly your previously started server crashed"
         fi
     fi
         done
-        echo "!"
-    fi
-
-    echo -n "Starting the TeaSpeak server"
-    if [[ -e "$BINARYNAME" ]]; then
-        if [[ "
-            "./${BINARYNAME}" --pipe-path "$TERMINAL_PIPE" ${COMMANDLINE_PARAMETERS} < /dev/null > /dev/null 2>&1 &
-             PID=$!
-            ps -p ${PID} > /dev/null 2>&1
-            if [[ "$?" -ne "0" ]]; then
-                echo -e "\nTeaSpeak server could not start (PID == 0)"
-            else
                 echo ${PID} > ${PID_FILE}
 
                 c=1
