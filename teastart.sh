@@ -23,16 +23,7 @@ BINARYNAM
         stop_server
     ;;
     restart)
-        $0 stop && $0 start ${COMMANDLINE_PARAMETERS} || exit 1
-    ;;
-    status)
-        status_server
-    ;;
-    reload)
-        execute_command "config reload"
-        exit 0
-    ;;
-    execute)
+        $0 
         execute_command "${@:2}"
         exit 0
     ;;
