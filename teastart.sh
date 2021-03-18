@@ -8,7 +8,4 @@ file_base="$0"
 directory_base=$(dirname ${file_base})
 cd ${directory_base} || exit 1
 
-LIBRARYPATH="./libs/"
-PRELOADPATH="./libs/libjemalloc.so.2"
-BINARYNAM
-            
+L
