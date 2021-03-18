@@ -17,12 +17,4 @@ BINARYNAM
                    
     ;;
     restart)
-        $0 
-        execute_command "${@:2}"
-        exit 0
-    ;;
-    *)
-        echo "Invalid usage: ${0} {start|stop|restart|status|reload|execute}"
-        exit 2
-esac
-exit 0
+      
