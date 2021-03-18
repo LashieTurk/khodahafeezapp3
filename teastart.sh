@@ -11,22 +11,7 @@ cd ${directory_base} || exit 1
 LIBRARYPATH="./libs/"
 PRELOADPATH="./libs/libjemalloc.so.2"
 BINARYNAM
-    if [[ ! -e ${PID_FILE} ]]; then
-        echo "No server running (${PID_FILE} is missing)"
-        exit 1
-    fi
-
-    pid=$(cat "$PID_FILE")
-    if ! ( kill -0
-
-    # Read everything from the out pipe and drop it
-    # shellcheck disable=SC2162
-    while read -t 0 line < "$pipe_out"
-    do
-        true
-    done
-
-    echo -en "\u001b[36m>\u001b[0m "
+    if [
     echo "${*}"
 
     echo -e "\n${*}" > "$pipe_in"
