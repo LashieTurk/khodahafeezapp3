@@ -31,24 +31,7 @@ execute_command() {
     fi
 
     pid=$(cat "$PID_FILE")
-    if ! ( kill -0 "$pid" 2> /dev/null ); then
-        echo "Server seems to have died"
-        exit 1
-    fi
-
-    pipe="${TERMINAL_PIPE/\$\{pid\}/$pid}"
-    pipe_in="${pipe/\$\{direction\}/in}"
-    pipe_out="${pipe/\$\{direction\}/out}"
-
-    if [[ ! -p "$pipe_in" ]]; then
-        echo "Terminal input pipe does not exists ($pipe_in)"
-        exit 1
-    fi
-
-    if [[ ! -p "$pipe_out" ]]; then
-        echo "Terminal output pipe does not exists ($pipe_out)"
-        exit 1
-    fi
+    if ! ( kill -0
 
     # Read everything from the out pipe and drop it
     # shellcheck disable=SC2162
