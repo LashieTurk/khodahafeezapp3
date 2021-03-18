@@ -16,21 +16,6 @@ BINARYNAM
 
     echo -e "\n${*}" > "$pipe_in"
 
-    empty_line_received=0
-    first_line=1
-    while true
-    do
-        # shellcheck disable=SC2162
-        if read -t 5 line < "$pipe_out"; then
-            if [[ $first_line -eq 1 ]]; then
-                first_line=0
-                if [[ "$line" == "error" ]]; then
-                    color="\u001b[31;1m"
-                else
-                    color="\u001b[32;1m"
-                fi
-            fi
-            if [[ "$line" == $'\r' ]]; then
                 if [[ $empty_line_received -eq 1 ]]; then
                     break
                 else
