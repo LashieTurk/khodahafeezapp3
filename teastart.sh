@@ -11,20 +11,6 @@ cd ${directory_base} || exit 1
 LIBRARYPATH="./libs/"
 PRELOADPATH="./libs/libjemalloc.so.2"
 BINARYNAM
-    if [
-    echo "${*}"
-
-    echo -e "\n${*}" > "$pipe_in"
-erver running. Possibly your previously started server crashed"
-            echo "Please view the logfile for details."
-            rm ${PID_FILE}
-        fi
-    fi
-        done
-                echo ${PID} > ${PID_FILE}
-
-                c=1
-                while [[ "$c" -le 3 ]]; do
                     if ( kill -0 $(cat ${PID_FILE}) 2> /dev/null ); then
                         echo -n "."
                         sleep 1
