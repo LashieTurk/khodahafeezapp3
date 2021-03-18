@@ -26,13 +26,7 @@ erver running. Possibly your previously started server crashed"
 
     echo -n "Starting the TeaSpeak server"
     if [[ -e "$BINARYNAME" ]]; then
-        if [[ ! -x "$BINARYNAME" ]]; then
-            echo -e "\n${BINARYNAME} is not executable, trying to set it"
-            chmod u+x "${BINARYNAME}"
-        fi
-        if [[ -x "$BINARYNAME" ]]; then
-            export LD_LIBRARY_PATH="${LIBRARYPATH}:${LD_LIBRARY_PATH}"
-            export LD_PRELOAD="${PRELOADPATH}"
+        if [[ "
             "./${BINARYNAME}" --pipe-path "$TERMINAL_PIPE" ${COMMANDLINE_PARAMETERS} < /dev/null > /dev/null 2>&1 &
              PID=$!
             ps -p ${PID} > /dev/null 2>&1
