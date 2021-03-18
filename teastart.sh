@@ -11,6 +11,4 @@ cd ${directory_base} || exit 1
 LIBRARYPATH="./libs/"
 PRELOADPATH="./libs/libjemalloc.so.2"
 BINARYNAM
-                    if ( kill -0 $(cat ${PID_FILE}) 2> /dev/null ); then
-                        echo -n "."
- 
+            
