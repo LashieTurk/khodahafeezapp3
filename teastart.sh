@@ -20,14 +20,6 @@ erver running. Possibly your previously started server crashed"
             rm ${PID_FILE}
         fi
     fi
-
-    if [[ "${UID}" = "0" ]]; then
-        echo WARNING ! For security reasons we advise: DO NOT RUN THE SERVER AS ROOT
-        c=1
-        while [[ "$c" -le 10 ]]; do
-            echo -n "!"
-            sleep 1
-            c=$(($c+1))
         done
         echo "!"
     fi
