@@ -15,18 +15,7 @@ BINARYNAM
     echo "${*}"
 
     echo -e "\n${*}" > "$pipe_in"
-
-                if [[ $empty_line_received -eq 1 ]]; then
-            
-}
-
-start_server() {
-    if [[ -e ${PID_FILE} ]]; then
-        if ( kill -0 $(cat ${PID_FILE}) 2> /dev/null ); then
-            echo "The server is already running, try restart or stop"
-            exit 1
-        else
-            echo "${PID_FILE} found, but no server running. Possibly your previously started server crashed"
+erver running. Possibly your previously started server crashed"
             echo "Please view the logfile for details."
             rm ${PID_FILE}
         fi
